@@ -34,7 +34,7 @@
   <body>
 
 <!-- load the d3.js library -->	
-<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
 	
 <script>
 var json = 
@@ -126,7 +126,7 @@ function update(source)
     // Normalize for fixed-depth.
     nodes.forEach(function(d) { d.y = d.depth * maxLabel; });
 
-    // Update the nodes…
+    // Update the nodesâ€¦
     var node = svg.selectAll("g.node")
         .data(nodes, function(d){ 
             return d.id || (d.id = ++i); 
@@ -175,7 +175,7 @@ function update(source)
     nodeExit.select("circle").attr("r", 0);
     nodeExit.select("text").style("fill-opacity", 0);
 
-    // Update the links…
+    // Update the linksâ€¦
     var link = svg.selectAll("path.link")
         .data(links, function(d){ return d.target.id; });
 
